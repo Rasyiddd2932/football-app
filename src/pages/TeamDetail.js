@@ -1,18 +1,23 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import api from "../api/axios";
 import "./TeamDetail.css";
 
 function TeamDetail() {
+  // route: /team/:id
+  // ambil variable id yang ada di route dengan useParams
   const { id } = useParams();
-  const [team, setTeam] = React.useState(null);
+  const [team, setTeam] = useState(null);
 
   useEffect(() => {
+    // import api dari folder api/axios.js,
+    // mengambil data dari api https://api.football-data.org/v2/teams/ + id yang didapat dari route
     api.get("/teams/" + id).then((response) => {
       setTeam(response.data);
     });
   }, [id]);
 
+  // jika belum ada data team yang didapat dari api, render tulisan loading
   if (!team) {
     return <div>Loading...</div>;
   }
@@ -22,6 +27,7 @@ function TeamDetail() {
       <h2>Team Detail</h2>
       <div className="team-detail">
         <div className="team-detail-logo">
+          {/* render logo team apabila ada, render tulisan no logo apabila tidak ada */}
           {team.crestUrl ? (
             <img src={team.crestUrl} alt="logo" className="team-logo" />
           ) : (

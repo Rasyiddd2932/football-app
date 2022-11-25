@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 function CompetitionCard({ data }) {
   return (
+    // apabila card diklik, akan navigasi ke halaman detail competition
     <Link to={"/competition/" + data.code}>
       <div className="competition-item">
         <div className="competition-logo-container">

@@ -8,6 +8,7 @@ const Matches = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    // import api dari folder api/axios.js, mengambil data dari api https://api.football-data.org/v2/matches
     api
       .get("/matches")
       .then((response) => {

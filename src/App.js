@@ -15,11 +15,27 @@ function App() {
       <main className="main-container">
         {/* deklarasi route yang digunakan*/}
         <Routes>
+          {/* home */}
           <Route path="/" element={<Home />} />
+
+          {/* halaman detail team, 
+              contoh: team/1 
+                      team/2 
+                      team/3
+          */}
           <Route path="/team/:id" element={<TeamDetail />} />
+
           <Route path="/competitions" element={<Competitions />} />
+
+          {/* halaman detail competition, 
+              contoh: competition/1 
+                      competition/2 
+                      competition/3
+          */}
           <Route path="/competition/:id" element={<CompetitionDetail />} />
+
           <Route path="/matches" element={<Matches />} />
+
           <Route path="/about" element={<About />} />
           {/* apabila tidak ada yang sesuai, akan tampil 404 */}
           <Route path="*" element={<div>404 Not found</div>} />

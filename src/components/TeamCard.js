@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 function TeamCard({ data }) {
   return (
+    // apabila card diklik, akan navigasi ke halaman detail team
     <Link to={"/team/" + data.id}>
       <div className="team-item">
         <div className="team-logo-container">

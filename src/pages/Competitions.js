@@ -8,6 +8,7 @@ const Competitions = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    // import api dari folder api/axios.js, mengambil data dari api https://api.football-data.org/v2/competitions
     api
       .get("/competitions")
       .then((response) => {

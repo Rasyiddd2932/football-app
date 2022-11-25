@@ -4,12 +4,16 @@ import api from "../api/axios";
 import "./CompetitionDetail.css";
 
 const CompetitionDetail = () => {
+  // route: /competition/:id
+  // ambil variable id yang ada di route dengan useParams
   const { id } = useParams();
   const [competition, setCompetition] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    // import api dari folder api/axios.js,
+    // mengambil data dari api https://api.football-data.org/v2/competitions/ + id yang didapat dari route
     api
       .get("/competitions/" + id)
       .then((response) => {
@@ -40,6 +44,7 @@ const CompetitionDetail = () => {
 
       <div className="competition-detail">
         <div className="competition-detail-logo">
+          {/* kalau ada emblem, render emblem, kalau tidak maka render tulisan no logo */}
           {competition.emblemUrl ? (
             <img
               src={competition.emblemUrl}
