@@ -18,7 +18,7 @@ const Matches = () => {
 
   return (
     <div>
-      <h2>Last matches</h2>
+      <h2>Matches</h2>
       <div className="matches-list">
         {matches.map((match) => (
           <MatchCard data={match} key={match.id} />

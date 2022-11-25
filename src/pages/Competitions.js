@@ -18,7 +18,7 @@ const Competitions = () => {
 
   return (
     <div>
-      <h2>Search by competition</h2>
+      <h2>Competitions</h2>
       <div className="competition-list">
         {competitions.map((competition) => (
           <CompetitionCard data={competition} key={competition.id} />
