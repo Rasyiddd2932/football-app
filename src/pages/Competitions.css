@@ -1,0 +1,50 @@
+.competition-list {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 480px) {
+  .competition-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.competition-item {
+  width: 100%;
+  background: white;
+  padding: 20px;
+  border: 1px solid #b5e2fa;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.competition-item:hover {
+  border: 1px solid #1e90ff;
+}
+
+.competition-logo-container {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 0.5rem;
+}
+
+.competition-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.competition-logo-placeholder {
+  width: 100%;
+  height: 100%;
+  background: #eddea4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 0.5rem;
+}

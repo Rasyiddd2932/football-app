@@ -1,0 +1,29 @@
+.competition-detail {
+  margin-top: 1rem;
+  width: 100%;
+  background: white;
+  padding: 20px;
+  border: 1px solid #b5e2fa;
+}
+
+.competition-detail-logo {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin: auto;
+}
+
+.competition-detail-info {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.competition-detail-info > h4 {
+  background-color: #b5e2fa;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  margin: 0.5rem 0;
+  max-width: max-content;
+}
