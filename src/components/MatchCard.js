@@ -1,10 +1,11 @@
 import React from "react";
 
 function MatchCard({ data }) {
+  console.log(data);
   return (
     <div className="match-item">
       <div className="match-item__date">
-        {new Date(data.utcDate).toLocaleDateString()}
+        {new Date(data.utcDate).toLocaleString()}
       </div>
       <div className="scoreboard">
         <div className="home-team">{data.homeTeam.name}</div>
