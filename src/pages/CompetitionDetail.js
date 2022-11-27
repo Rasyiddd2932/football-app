@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import api from "../api/axios";
+import TeamsInCompetition from "../components/TeamsInCompetition";
 import "./CompetitionDetail.css";
 
 const CompetitionDetail = () => {
@@ -68,6 +69,7 @@ const CompetitionDetail = () => {
             {competition.currentSeason.endDate}
           </p>
         </div>
+        <TeamsInCompetition code={competition.code} />
       </div>
     </div>
   );
