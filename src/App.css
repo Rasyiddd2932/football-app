@@ -26,6 +26,7 @@ header {
   background: white;
   padding: 1.5rem;
   border-bottom: 1px solid #eddea4;
+  z-index: 30;
 }
 
 footer {

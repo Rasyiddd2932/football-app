@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import api from "../api/axios";
 import TeamCard from "../components/TeamCard";
 import "./HomeScreen.css";
@@ -23,6 +24,29 @@ const Home = () => {
 
   return (
     <div>
+      <div className="banner">
+        <div className="grid-menu">
+          <Link to="/competitions" className="menu-item">
+            <div className="title">
+              <h5>See Competitions</h5>
+            </div>
+            <img
+              src="https://cdn.shopify.com/s/files/1/0625/5971/5549/files/footballhome_1800x.jpg?v=1644933098"
+              alt="comp"
+            />
+          </Link>
+
+          <Link to="/matches" className="menu-item">
+            <div className="title">
+              <h5>Worldcup Schedules</h5>
+            </div>
+            <img
+              src="https://media.kompas.tv/library/image/content_article/article_img/20220616125541.jpg"
+              alt="wc2022"
+            />
+          </Link>
+        </div>
+      </div>
       <h2>Featured teams</h2>
       <div className="team-list">
         {/* looping data yang didapat dari api ke komponen TeamCard, 

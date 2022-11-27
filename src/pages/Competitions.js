@@ -3,6 +3,22 @@ import api from "../api/axios";
 import CompetitionCard from "../components/CompetitionCard";
 import "./Competitions.css";
 
+const whitelist = [
+  "WC",
+  "CL",
+  "BL1",
+  "DED",
+  "BSA",
+  "PD",
+  "FL1",
+  "ELC",
+  "PPL",
+  "EC",
+  "SA",
+  "PL",
+  "CLI",
+];
+
 const Competitions = () => {
   const [competitions, setCompetitions] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -21,9 +37,12 @@ const Competitions = () => {
     <div>
       <h2>Competitions</h2>
       <div className="competition-list">
-        {competitions.map((competition) => (
-          <CompetitionCard data={competition} key={competition.id} />
-        ))}
+        {competitions
+          // memfilter competitions sesuai dengan whitelist yang dibuat
+          .filter((each) => whitelist.includes(each.code))
+          .map((competition) => (
+            <CompetitionCard data={competition} key={competition.id} />
+          ))}
       </div>
       {loading && <div>Loading...</div>}
     </div>
