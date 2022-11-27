@@ -60,6 +60,14 @@
   gap: 1rem;
 }
 
+@media (max-width: 480px) {
+  .banner > .grid-menu {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
 .menu-item {
   position: relative;
 }
